@@ -10,6 +10,7 @@ import sys
 #2 + jar with 8 cookies
 #1 with jar with 9 cookies
 
+# This problem is very similar to the example Beej did in lecture for fibonacci
 def eating_cookies(n, cache={}):
 
   if n < 0:
