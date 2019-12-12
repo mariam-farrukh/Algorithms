@@ -2,9 +2,12 @@
 
 import sys
 
-def making_change(amount, denominations):
-  pass 
-
+def making_change(amount, denominations, cache=[]):
+  cache = [1]+[0]*amount
+  for coin in denominations:
+    for i in range(coin, amount + 1):
+      cache[i] += cache[i - coin]
+  return cache[amount]
 
 if __name__ == "__main__":
   # Test our your implementation from the command line
